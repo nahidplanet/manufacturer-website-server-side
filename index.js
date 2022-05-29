@@ -189,14 +189,14 @@ async function run() {
       res.send(result);
     })
 
-    // useAdmin hooks api
-    app.get("/admin/:email", verifyJwt, async(req, res)=>{
-      const email = req.params.email;
-      const filter = {email: email};
-      const user = await usersCollection.findOne(filter);
-      const isAdmin = user.role === "admin";
-      res.send({admin: isAdmin});
-    })
+    // // useAdmin hooks api
+    // app.get("/admin/:email", verifyJwt, async(req, res)=>{
+    //   const email = req.params.email;
+    //   const filter = {email: email};
+    //   const user = await usersCollection.findOne(filter);
+    //   const isAdmin = user.role === "admin";
+    //   res.send({admin: isAdmin});
+    // })
    
     app.put("/updateUser/:email", verifyJwt, async (req, res) => {
       const updateUser = req.body;
