@@ -1,9 +1,28 @@
-# [Parts Store Server site](https://protected-mountain-80420.herokuapp.com/)
-### Heroku live Server site link [https://protected-mountain-80420.herokuapp.com/](https://protected-mountain-80420.herokuapp.com/)
 
-## Five Bullet point about this project
-### 1. For backend i have used nodejs framework expressJs
-### 2. implement jsonwebtoken for secure server site
-### 3. put all secret key in .env file. and using dotenv for Loads environment variables from .env file
-### 4. using cors middleware for passing data by http
-### 5. use mongodb database for store data
+=========================================================
+# AUTO PARTS STORES
+## Find The Right Parts
+
+we carry over 250 of the world's highest quality automotive parts brands across 42 product catagories
+
+
+## `git client`
+ client: [https://github.com/programming-hero-web-course1/manufacturer-website-client-side-nahidplanet]
+## `git Server`
+ server: [https://github.com/programming-hero-web-course1/manufacturer-website-server-side-nahidplanet]
+
+## `Live Website`
+ live Site: [https://assignment-12-629a7.web.app]
+## `Live Heroku Server`
+ live Heroku server: [https://guarded-reaches-90530.herokuapp.com/] ;
+## `admin Email`
+ # email: `[ admin@gmail.com ]` ;
+## `admin Password`
+ # password: `[ 123456 ]` ;
+
+
+
+
+
+# Git Problem ar jonno Poriman moto Commit korte parini.... tai project ready kore pore aksathe push koreci
+ 
