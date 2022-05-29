@@ -189,36 +189,36 @@ async function run() {
       res.send(result);
     })
 
-    // // useAdmin hooks api
-    // app.get("/admin/:email", verifyJwt, async(req, res)=>{
-    //   const email = req.params.email;
-    //   const filter = {email: email};
-    //   const user = await usersCollection.findOne(filter);
-    //   const isAdmin = user.role === "admin";
-    //   res.send({admin: isAdmin});
-    // })
-   
-    app.put("/updateUser/:email", verifyJwt, async (req, res) => {
-      const updateUser = req.body;
-      const { education, address, phone, linkedIn } = updateUser;
+    // useAdmin hooks api
+    app.get("/admin/:email", verifyJwt, async(req, res)=>{
       const email = req.params.email;
-      const filter = { email: email };
-      const options = { upsert: true };
-      const updatedDoc = {
-        $set: {
-          education: education,
-          address: address,
-          phone: phone,
-          linkedIn: linkedIn,
-        },
-      };
-      const result = await usersCollection.updateOne(
-        filter,
-        updatedDoc,
-        options
-      );
-      res.send(result);
-    });
+      const filter = {email: email};
+      const user = await usersCollection.findOne(filter);
+      const isAdmin = user.role === "admin";
+      res.send({admin: isAdmin});
+    })
+   
+    // app.put("/updateUser/:email", verifyJwt, async (req, res) => {
+    //   const updateUser = req.body;
+    //   const { education, address, phone, linkedIn } = updateUser;
+    //   const email = req.params.email;
+    //   const filter = { email: email };
+    //   const options = { upsert: true };
+    //   const updatedDoc = {
+    //     $set: {
+    //       education: education,
+    //       address: address,
+    //       phone: phone,
+    //       linkedIn: linkedIn,
+    //     },
+    //   };
+    //   const result = await usersCollection.updateOne(
+    //     filter,
+    //     updatedDoc,
+    //     options
+    //   );
+    //   res.send(result);
+    // });
 
     app.get("/user/:email", async (req, res) => {
       const email = req.params.email;
